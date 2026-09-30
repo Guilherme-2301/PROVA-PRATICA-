@@ -1,0 +1,7 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# O arquivo .sql do banco e um dump BINARIO (pg_dump -Fc): jamais converter EOL
+backend/db/bkt_quitanda.sql binary
+# Scripts executados dentro de containers Linux precisam de LF (nao CRLF)
+*.sh text eol=lf
